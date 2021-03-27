@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/nikhil41425/CRM-APP-BACKEND/issues"
   },
-  "homepage": "https://github.com/nikhil41425/CRM-APP-BACKEND#readme"
+  "homepage": "https://github.com/nikhil41425/CRM-APP-BACKEND#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.2"
+  }
 }
