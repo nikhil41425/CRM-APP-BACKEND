@@ -1,4 +1,4 @@
-var JWT= require('jsonwebtoken');
+var jwt= require('jsonwebtoken');
 var Config= require('../config/app.config');
 exports.authMiddleware= function(request,response,next){    
     console.log(request.headers);
@@ -12,9 +12,9 @@ exports.authMiddleware= function(request,response,next){
 
     console.log('token',token);
 
-     JWT.verify(token,Config.config.JWT_SECRET,function(error, payload){
+     jwt.verify(token,Config.config.JWT_SECRET,function(error, payload){
          if(error){
-             response.send({error:error.message})
+             response.send({error:error.message});
          }
          if(payload){
              console.log(payload);
@@ -22,5 +22,5 @@ exports.authMiddleware= function(request,response,next){
          }
      })
 
-   
+    // send response or call next()
 }
